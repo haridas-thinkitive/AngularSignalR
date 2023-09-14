@@ -1,0 +1,34 @@
+<div class="bg-body-secondary text-center py-5 rounded-2">
+    Asset Details
+</div>
+
+<div class="row mt-5">
+    <div class="col-6">
+        <app-payment-details-form/>
+    </div>
+
+
+    <div class="col-6">
+        <ul class="list-group">
+
+            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor=" let pd of service.list">
+                <div class="flex-grow-1 mouse-hover">
+
+                <div class="fw-bold">{{pd.trackingId}}</div>
+                <div class="fw-bold">{{pd.name}}</div>
+                <div class="fw-bold">{{pd.latitude}}</div>
+                <div class="fw-bold">{{pd.longitude}}</div>
+                <div class="fw-bold">{{pd.location}}</div>
+                <div class="fw-bold">{{pd.isCheckedOut}}</div>
+                <div class="fw-bold">{{pd.isCheckedIn}}</div>
+                <div class="fw-bold">{{pd.barCode}}</div>
+
+                </div>
+                <span>
+                    <i class="fa-solid fa-trash-can fa-lg mouse-hover" (click)="onDelete(pd.id)"></i>
+                </span>    
+            </li>
+        </ul>
+    </div> 
+
+</div>

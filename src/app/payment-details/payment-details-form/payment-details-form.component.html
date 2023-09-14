@@ -1,0 +1,47 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+
+    <input type="hidden" name="id" [value]="service.formData.id">
+    <div class="mb-3">
+        <label>Tracking Id</label>
+        <input class="form-control form-control-lg" placeholder="Tracking ID" #trackingId = "ngModel" name="Tracking Id" [(ngModel)]="service.formData.trackingId">
+    </div>
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input class="form-control form-control-lg" placeholder="Name" #name = "ngModel" name="Name" [(ngModel)]="service.formData.name">
+    </div>
+
+    <div class="mb-3">
+        <label>Latitude</label>
+        <input class="form-control form-control-lg" placeholder="Tracking ID" #latitude = "ngModel" name="Latitude" [(ngModel)]="service.formData.latitude">
+    </div>
+
+    <div class="mb-3">
+        <label>Longitude</label>
+        <input class="form-control form-control-lg" placeholder="Longitude" #longitude = "ngModel" name="Longitude" [(ngModel)]="service.formData.longitude">
+    </div>
+
+    <div class="mb-3">
+        <label>Location</label>
+        <input class="form-control form-control-lg" placeholder="Location" #location = "ngModel" name="Location" [(ngModel)]="service.formData.location">
+    </div>
+    <div class="mb-3">
+        <label>Checked In</label>
+        <input class="form-control form-control-lg" placeholder="Location" #isCheckedIn = "ngModel" name="isCheckedIn" [(ngModel)]="service.formData.isCheckedIn">
+    </div>
+    <div class="mb-3">
+        <label>Checked Out</label>
+        <input class="form-control form-control-lg" placeholder="isCheckedOut" #isCheckedOut = "ngModel" name="isCheckedOut" [(ngModel)]="service.formData.isCheckedOut">
+    </div>
+
+    <div class="mb-3">
+        <label>BarCode</label>
+        <input class="form-control form-control-lg" placeholder="barCode" #barCode = "ngModel" name="barCode" [(ngModel)]="service.formData.barCode">
+    </div>
+
+
+    <div class="d-grid">
+        <button class="btn btn-lg btn-success" type="submit">Submit</button>
+    </div>
+
+</form>
